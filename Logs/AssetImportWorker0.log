@@ -216,3 +216,4 @@ Received Import Request.
   path: Assets/Script/OptionPopup.cs
   artifactKey: Guid(f0a7e232eb27403418421293c7d2b28f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Script/OptionPopup.cs using Guid(f0a7e232eb27403418421293c7d2b28f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74f77933f4dd1117e78a0a94d6a12f8f') in 0.007485 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
