@@ -20,12 +20,18 @@ public class OptionPopup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameObject.active.Equals(true))
+            Time.timeScale = 0;
     }
-
+    void OnCancelButton()
+    {
+        gameObject.SetActive(false);
+        Time.timeScale = 1;
+    }
     void OnOkButton()
     {
-        gameObject.SetActive(false);    
+        gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 
     void OnTextChanged()

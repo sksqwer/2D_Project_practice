@@ -5,11 +5,12 @@ using UnityEngine;
 public class Bullet1 : MonoBehaviour
 {
     private Rigidbody2D rigidBody;
+    int velocity = 1500;
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 3.0f);
+        Destroy(gameObject, 10.0f);
     }
 
     // Update is called once per frame
@@ -21,7 +22,7 @@ public class Bullet1 : MonoBehaviour
     private void move()
     {
         Vector3 pos = rigidBody.transform.position;
-        pos = new Vector3(pos.x + 1000 * Time.deltaTime, pos.y, pos.z);
+        pos = new Vector3(pos.x + velocity * Time.deltaTime, pos.y, pos.z);
 
         rigidBody.MovePosition(pos);
     }
@@ -31,6 +32,7 @@ public class Bullet1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            Gamemanager_2D.Instance.score += 100;
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

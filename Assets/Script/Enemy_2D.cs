@@ -12,7 +12,7 @@ public class Enemy_2D : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, 5.0f);
+        Destroy(gameObject, 20.0f);
         
     }
 
@@ -34,7 +34,7 @@ public class Enemy_2D : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Player_2D>().HP = 0;
         }
     }
 }
